@@ -1,6 +1,12 @@
 <template>
-  <div>
-    test
+  <div class="w-full h-full flex justify-center items-center font-sans">
+    <form class="w-1/4 flex flex-col">
+      <label for="email" class="font-medium">Email :</label>
+      <input type="email" id="email" name="email" placeholder="nom.prenom@mail.com" class="p-1 mb-8 mt-2 rounded border-2 border-gray-300 outline-none transition duration-250 focus:border-gray-500">
+      <label for="password" class="font-medium">Mot de passe :</label>
+      <input type="password" id="password" name="password" class="p-1 mt-2 rounded border-2 border-gray-300 outline-none transition duration-250 focus:border-gray-500">
+      <button type="submit" class="p-1 mt-16 rounded border-2 border-indigo-400 text-indigo-500 transition duration-250 hover:text-white hover:bg-indigo-400">Se connecter</button>
+    </form>
   </div>
 </template>
 
