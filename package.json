@@ -17,6 +17,7 @@
     "@pinia-orm/nuxt": "^1.1.0",
     "@pinia/nuxt": "^0.4.3",
     "defu": "^6.1.0",
+    "mosha-vue-toastify": "^1.0.23",
     "pinia": "2.0.22",
     "pinia-orm": "^1.0.3",
     "sass": "^1.55.0",
