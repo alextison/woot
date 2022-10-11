@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         // ...
         '@pinia/nuxt',
         '@pinia-orm/nuxt',
-        '@nuxtjs/tailwindcss'
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/supabase'
     ],
 })
