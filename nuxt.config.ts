@@ -1,6 +1,9 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 
 export default defineNuxtConfig({
+    build: {
+        transpile: ['@vee-validate/rules']
+    },
     loading: {
         color: 'blue',
         height: '5px'
@@ -12,5 +15,5 @@ export default defineNuxtConfig({
         '@pinia-orm/nuxt',
         '@nuxtjs/tailwindcss',
         '@nuxtjs/supabase'
-    ],
+    ]
 })

@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [],
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+      cursor: ['disabled'],
+    },
+  },
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+	require('@tailwindcss/forms'),
+  ],
 }

@@ -5,12 +5,17 @@ specifiers:
   '@nuxtjs/tailwindcss': ^5.3.5
   '@pinia-orm/nuxt': ^1.1.0
   '@pinia/nuxt': ^0.4.3
+  '@tailwindcss/forms': ^0.5.3
+  '@vee-validate/i18n': ^4.7.0
+  '@vee-validate/rules': ^4.7.0
   defu: ^6.1.0
   mosha-vue-toastify: ^1.0.23
   nuxt: 3.0.0-rc.11
   pinia: 2.0.22
   pinia-orm: ^1.0.3
   sass: ^1.55.0
+  tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+  vee-validate: ^4.7.0
   vue: '>=3.0.0-0 <3.0.0 || >=3.2.0 <4.0.0 || >=2.6.14 <3.0.0'
   webpack: '>=4.27.0 <5.0.0 || >=5.0.0 <6.0.0'
 
@@ -19,11 +24,16 @@ dependencies:
   '@nuxtjs/tailwindcss': 5.3.5_webpack@5.74.0
   '@pinia-orm/nuxt': 1.1.0_rcuuicbcgilszanc4by2dvibs4
   '@pinia/nuxt': 0.4.3_vue@3.2.40
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
+  '@vee-validate/i18n': 4.7.0
+  '@vee-validate/rules': 4.7.0
   defu: 6.1.0
   mosha-vue-toastify: 1.0.23
   pinia: 2.0.22_vue@3.2.40
   pinia-orm: 1.0.3_pinia@2.0.22
   sass: 1.55.0
+  tailwindcss: 3.1.8
+  vee-validate: 4.7.0_vue@3.2.40
   vue: 3.2.40
   webpack: 5.74.0
 
@@ -808,6 +818,15 @@ packages:
       - supports-color
     dev: false
 
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.1.8
+    dev: false
+
   /@trysound/sax/0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
@@ -858,6 +877,14 @@ packages:
     dependencies:
       '@types/node': 18.8.3
     dev: true
+
+  /@vee-validate/i18n/4.7.0:
+    resolution: {integrity: sha512-NwoqzTprINUGwt9QmF4QUS+tPbHH16wSrYHKl3Q6h1rJcGaPoQPc2dvR3Pp5n/QMU1Ey8vNPcj2QrCoEjuD67w==}
+    dev: false
+
+  /@vee-validate/rules/4.7.0:
+    resolution: {integrity: sha512-DdJY7DJEvIr1i3rBSbd3Vc0c+sKt4/pT/IIHQmQ7tSviqjNTHOnUalbqa5t+4z5OOz8L71ic0lqJHlgaPRgMGQ==}
+    dev: false
 
   /@vercel/nft/0.22.1:
     resolution: {integrity: sha512-lYYZIoxRurqDOSoVIdBicGnpUIpfyaS5qVjdPq+EfI285WqtZK3NK/dyCkiyBul+X2U2OEhRyeMdXPCHGJbohw==}
@@ -3393,6 +3420,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: false
+
   /minimatch/3.0.8:
     resolution: {integrity: sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==}
     dependencies:
@@ -5263,6 +5295,15 @@ packages:
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /vee-validate/4.7.0_vue@3.2.40:
+    resolution: {integrity: sha512-7HW2RE8mWaT57Jn+JU7jwczFqtlc1rIAwSbp8kD1L2sO0plhT9YeDNKW5iaI9baosc4h+iyb6itMlXtqAAqAfw==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@vue/devtools-api': 6.4.4
+      vue: 3.2.40
     dev: false
 
   /vite-node/0.23.4_sass@1.55.0:
