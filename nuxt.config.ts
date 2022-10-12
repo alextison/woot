@@ -1,5 +1,12 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+
 export default defineNuxtConfig({
+    css: [
+        '@fortawesome/fontawesome-svg-core/styles.css'
+    ],
+    build: {
+        transpile: ['@vee-validate/rules']
+    },
     loading: {
         color: 'blue',
         height: '5px'
@@ -9,6 +16,7 @@ export default defineNuxtConfig({
         // ...
         '@pinia/nuxt',
         '@pinia-orm/nuxt',
-        '@nuxtjs/tailwindcss'
-    ],
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/supabase'
+    ]
 })

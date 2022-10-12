@@ -5,19 +5,32 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.11"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "~1 || ~6",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@nuxtjs/supabase": "^0.1.28",
     "@nuxtjs/tailwindcss": "^5.3.5",
     "@pinia-orm/nuxt": "^1.1.0",
     "@pinia/nuxt": "^0.4.3",
+    "@tailwindcss/forms": "^0.5.3",
+    "@vee-validate/i18n": "^4.7.0",
+    "@vee-validate/rules": "^4.7.0",
     "defu": "^6.1.0",
+    "mosha-vue-toastify": "^1.0.23",
     "pinia": "2.0.22",
     "pinia-orm": "^1.0.3",
     "sass": "^1.55.0",
+    "tailwindcss": ">=3.0.0 || >= 3.0.0-alpha.1",
+    "vee-validate": "^4.7.0",
     "vue": ">=3.0.0-0 <3.0.0 || >=3.2.0 <4.0.0 || >=2.6.14 <3.0.0",
     "webpack": ">=4.27.0 <5.0.0 || >=5.0.0 <6.0.0"
   }
