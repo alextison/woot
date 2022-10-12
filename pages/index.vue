@@ -27,6 +27,7 @@
               class="p-1 mt-16 rounded border-2 border-indigo-400 text-indigo-500 transition duration-250 disabled:opacity-50"
               :class="{'hover:text-white': meta.touched, 'hover:bg-indigo-400': meta.touched}" :disabled="!meta.touched">
         Se connecter
+        <font-awesome-icon icon="fa-solid fa-rocket" />
       </button>
     </Form>
   </div>

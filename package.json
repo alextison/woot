@@ -12,6 +12,11 @@
     "nuxt": "3.0.0-rc.11"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "~1 || ~6",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
     "@nuxtjs/supabase": "^0.1.28",
     "@nuxtjs/tailwindcss": "^5.3.5",
     "@pinia-orm/nuxt": "^1.1.0",
