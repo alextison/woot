@@ -4,7 +4,8 @@ import {navigateTo} from "#app";
 export default defineNuxtRouteMiddleware((to) => {
     const user = useSupabaseUser();
 
-    if (!user.value  && to.path !== '/') {
+    // Listen to Supabase auth changes
+    if (!user.value && to.path !== '/') {
         navigateTo('/');
     }
 });
