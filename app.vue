@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import {required, email, min} from '@vee-validate/rules';
+import {required, email, min, confirmed} from '@vee-validate/rules';
 import {defineRule, configure} from 'vee-validate';
 import {localize, setLocale} from '@vee-validate/i18n';
 import fr from '@vee-validate/i18n/dist/locale/fr.json';
@@ -18,6 +18,8 @@ defineRule("email", email);
 
 // Install min rule.
 defineRule("min", min);
+
+defineRule("confirmed", confirmed);
 
 configure({
   generateMessage: localize({

@@ -92,7 +92,7 @@ const createAccount = async (values: any) => {
       .insert([
         {
           id: createdUser.id,
-          firsttime: false,
+          firsttime: true,
           role: roles.find((role: any) => role.name === values.role).id,
         },
       ]);
