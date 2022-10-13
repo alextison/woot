@@ -119,13 +119,13 @@ const {data: roleUser} = await client.from('role').select('id').eq('name', 'user
 
 const { data: coin } = await client.from('wallet').select('amount').eq('user_id', user.value.id).single();
 
-// if (userRole.role === roleAdmin.id && route.name.toString().startsWith('user')) {
-//   navigateTo('/admin');
-// }
+if (userRole.role === roleAdmin.id && route.name.toString().startsWith('user')) {
+  navigateTo('/admin');
+}
 
-// if (userRole.role === roleUser.id && route.name.toString().startsWith('admin')) {
-//   navigateTo('/user');
-// }
+if (userRole.role === roleUser.id && route.name.toString().startsWith('admin')) {
+  navigateTo('/user');
+}
 </script>
 
 <style scoped>

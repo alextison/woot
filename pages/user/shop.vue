@@ -6,7 +6,7 @@
                 <div class="w-1/5 h-full"></div>
                 <h2 class="w-3/5 text-4xl font-medium mb-1">Boutique</h2>
                 <div class="w-1/5 flex items-center">
-                    <p>Pièces disponibles</p>
+                    <p>{{ coin.amount }}</p>
                     <img src="~/assets/img/coin.png" class="ml-2 mr-16 h-12" alt="Woot Coin" />
                     <button>
                         <svg class="svg-icon h-8" viewBox="0 0 20 20">
@@ -119,7 +119,12 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const client = useSupabaseClient();
+const user = useSupabaseUser();
+
+const { data: coin } = await client.from('wallet').select('amount').eq('user_id', user.value.id).single();
+</script>
 
 <style scoped>
 
