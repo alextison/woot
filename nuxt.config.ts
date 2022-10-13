@@ -5,7 +5,7 @@ export default defineNuxtConfig({
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     build: {
-        transpile: ['@vee-validate/rules']
+        transpile: ['@vee-validate/rules', 'vue-final-modal']
     },
     loading: {
         color: 'blue',
@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         '@pinia-orm/nuxt',
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/supabase'
+        '@nuxtjs/supabase',
+        '@vueuse/nuxt'
     ]
 })
