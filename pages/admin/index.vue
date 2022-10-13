@@ -52,6 +52,8 @@
         <div class="w-full flex justify-evenly my-16">
           <a href="" class="w-1/5 py-1 rounded border-2 border-indigo-400 text-indigo-500 transition duration-250 hover:text-white hover:bg-indigo-400">Évenement</a>
           <a href="" class="w-1/5 py-1 rounded border-2 border-indigo-400 text-indigo-500 transition duration-250 hover:text-white hover:bg-indigo-400">Boutique</a>
+          <button class="w-1/5 py-1 rounded border-2 border-indigo-400 text-indigo-500 transition duration-250 hover:text-white hover:bg-indigo-400" @click="showModal = true">Créer un compte</button>
+          <account-creation :show-modal="showModal" @close="showModal = false"/>
         </div>
         <div class="w-full flex flex-col items-center">
           <h2 class="text-xl font-semibold mb-1">Note générale</h2>
@@ -78,8 +80,10 @@
 </template>
 
 <script setup lang="ts">
-import {definePageMeta, navigateTo, useSupabaseClient, useSupabaseUser} from "#imports";
+import {definePageMeta, navigateTo, ref, useSupabaseClient, useSupabaseUser} from "#imports";
 import {useRoute} from "#app";
+import AccountCreation from "~/components/accountCreation.vue";
+import {Ref} from "vue";
 
 definePageMeta({
   middleware: ["auth"]
@@ -88,6 +92,8 @@ definePageMeta({
 const route = useRoute();
 const client = useSupabaseClient();
 const user = useSupabaseUser();
+
+const showModal: Ref<Boolean> = ref(false);
 
 const {data: userRole} = await client.from('user_profile').select('role').eq('id', user.value.id).single();
 const {data: roleAdmin} = await client.from('role').select('id').eq('name', 'admin').single();
