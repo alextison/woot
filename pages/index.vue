@@ -1,5 +1,6 @@
 <template>
   <div class="w-full h-full flex justify-center items-center font-sans">
+    <password-modification :show-modal="showModal" @close="showModal = false" />
     <Form class="w-1/4 flex flex-col" @submit="login" v-slot="{ meta }">
       <div class="mb-8 mt-2 flex flex-col">
         <label for="email" class="font-medium">Email :</label>
@@ -34,27 +35,35 @@
 </template>
 
 <script setup lang="ts">
-import {definePageMeta, onMounted, useSupabaseClient, useSupabaseUser} from "#imports";
+import {definePageMeta, onMounted, ref, useSupabaseClient, useSupabaseUser} from "#imports";
 import 'mosha-vue-toastify/dist/style.css';
 import {createToast} from 'mosha-vue-toastify';
 import {Form, Field, ErrorMessage} from 'vee-validate';
 import {navigateTo} from "#app";
+import {Ref} from "vue";
 
 definePageMeta({
   middleware: ["auth"]
 });
 
+const showModal: Ref<Boolean> = ref(false);
+
 const roleDetection = async (user) => {
   const {data: userRole} = await client.from('user_profile').select('role').eq('id', user.value.id).single();
   const {data: roleAdmin} = await client.from('role').select('id').eq('name', 'admin').single();
   const {data: roleUser} = await client.from('role').select('id').eq('name', 'user').single();
+  const {data: profileUser} = await client.from('user_profile').select('firsttime').eq('id', user.value.id).single();
 
-  if (userRole.role === roleAdmin.id) {
-    navigateTo('/admin');
-  }
+  if (profileUser.firsttime === true) {
+    showModal.value = true;
+  } else {
+    if (userRole.role === roleAdmin.id) {
+      navigateTo('/admin');
+    }
 
-  if (userRole.role === roleUser.id) {
-    navigateTo('/user');
+    if (userRole.role === roleUser.id) {
+      navigateTo('/user');
+    }
   }
 };
 
