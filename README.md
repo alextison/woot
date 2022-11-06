@@ -85,6 +85,10 @@ Project is: _no longer being worked on but will be taken back one day_.
 
 ## Room for Improvement
 
+Room for improvement:
+
+- Responsive UI
+
 To do:
 
 - Dynamic quests and shop products
